@@ -1,0 +1,55 @@
+<html>
+      <title>PsyduckAnime - best place to watch pokemon subbed and dubbed</title>
+<meta property="og:title" content="Psyduckanime - watch pokemon for free">
+<meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg" />
+  
+<head>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+</head>
+  <body>
+  <div id="player"></div>
+  <script>
+    var player = new Clappr.Player({source: "https://ta-001.abecdn.com/1ab5d45273a9183bebb58eb74d5722d8ea6384f350caf008f08cf018f1f0566d0cb82a2a799830d1af97cd3f4b6a9a81ef3aed2fb783292b1abcf1b8560a1d1aa308008b88420298522a9f761e5aa1024fbe74e5aa853cfc933cd1219327d1232e91847a185021b184c027f97ae732b3708ee6beb80ba5db6628ced43f1196fe/5767b7574f2f8a55c15af8e7f7acfc13/ep.1.1677689688.m3u8", parentId: "#player"});
+  </script>
+</body>
+
+ <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: 424242;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: 424242;
+        color: white;
+      }
+      .light-mode {
+        background-color: white;
+        color: 424242;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Dark Mode is ON";
+      }
+      function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
+      }
+    </script>
+  </body>
+  
+</html>
