@@ -6,13 +6,21 @@
     <link rel="icon" href="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg" />
   
 <head>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 </head>
-  <body>
-  <div id="player"></div>
-  <script>
-    var player = new Clappr.Player({source: "https://www046.vipanicdn.net/streamhls/56ed4e9c3ec1d0fa00fe89d3ea93bca0/ep.137.1686746293.m3u8", parentId: "#player"});
-  </script>
+<body>
+
+<div id="player"></div>
+
+<script>
+    var episodeId = "pokemon-2019-dub-episode-137";
+    async function getSource() {
+        const request = await fetch("https://consumet-api-production-0afb.up.railway.app/anime/gogoanime/watch/" + episodeId);
+        const json = await request.json();
+        var player = new Clappr.Player({source: json.sources[2].url, parentId: "#player"});
+    }
+    getSource();
+</script>
 </body>
 
  <style>
@@ -51,5 +59,4 @@
       }
     </script>
   </body>
-  
 </html>
