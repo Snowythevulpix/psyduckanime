@@ -1,69 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>PsyduckAnime - best place to watch pokemon subbed and dubbed</title>
-<meta property="og:title" content="Psyduckanime - watch pokemon for free">
-<meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg">
-    <!-- Favicon -->
-    <link rel="icon" href="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PsyduckAnime - best place to watch pokemon subbed and dubbed</title>
+  <meta property="og:title" content="Psyduckanime - watch pokemon for free">
+  <meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg">
+  <!-- Favicon -->
+  <link rel="icon" href="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg" />
   
-<head>
-     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
-</head>
-<body>
-
-  <script>
-    function copyToClipboard(elementId) {
-      var element = document.getElementById(elementId);
-      var text = element.innerText;
-
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text).then(function() {
-          alert("Copied to clipboard!");
-        }, function(err) {
-          console.error('Failed to copy text: ', err);
-        });
-      } else {
-        var textarea = document.createElement("textarea");
-        textarea.value = text;
-        textarea.style.position = "fixed"; // Prevent scrolling to bottom of page in Safari
-        document.body.appendChild(textarea);
-        textarea.focus();
-        textarea.select();
-
-        try {
-          var successful = document.execCommand('copy');
-          var msg = successful ? 'successful' : 'unsuccessful';
-          alert("Copied to clipboard!");
-        } catch (err) {
-          console.error('Failed to copy text: ', err);
-        }
-
-        document.body.removeChild(textarea);
-      }
-    }
-
-    function updateBox(text) {
-      var box = document.getElementById("box1");
-      box.innerText = text;
-    }
-
-    function darkMode() {
-      var element = document.body;
-      var content = document.getElementById("DarkModetext");
-      element.className = "dark-mode";
-      content.innerText = "Dark Mode is ON";
-    }
-
-    function lightMode() {
-      var element = document.body;
-      var content = document.getElementById("DarkModetext");
-      element.className = "light-mode";
-      content.innerText = "Dark Mode is OFF";
-    }
-  </script>
   <style>
     .box {
       width: 200px;
@@ -73,8 +18,11 @@
       padding: 10px;
       margin-bottom: 10px;
     }
+
     .button {
-      display: inline-block;
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
       padding: 5px 10px;
       background-color: #4CAF50;
       color: white;
@@ -82,35 +30,37 @@
       text-decoration: none;
       border-radius: 4px;
       cursor: pointer;
-      margin-right: 10px;
     }
+
     .dark-mode {
       background-color: #222;
       color: #fff;
     }
+
     #DarkModetext {
       margin-top: 0;
       margin-bottom: 10px;
     }
+
     .dark-mode-switch {
       position: fixed;
       bottom: 10px;
       right: 10px;
     }
+
     .series-buttons {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 10px;
+      position: relative;
       display: flex;
       flex-direction: column;
-      margin-top: 30px; /* Adjust the margin-top value as needed */
+      margin-bottom: 10px;
     }
+
     .search-text {
       font-size: 14px;
       margin-top: 10px;
       text-align: center;
     }
+
     .search-link {
       color: blue;
       text-decoration: underline;
@@ -147,5 +97,56 @@
     <button onclick="darkMode()">Dark Mode</button>
     <button onclick="lightMode()">Light Mode</button>
   </div>
+
+  <script>
+    function copyToClipboard(elementId) {
+      var element = document.getElementById(elementId);
+      var text = element.innerText;
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function() {
+          alert("Copied to clipboard!");
+        }, function(err) {
+          console.error('Failed to copy text: ', err);
+        });
+      } else {
+        var textarea = document.createElement("textarea");
+        textarea.value = text;
+        textarea.style.position = "fixed"; // Prevent scrolling to the bottom of the page in Safari
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+
+        try {
+          var successful = document.execCommand('copy');
+          var msg = successful ? 'successful' : 'unsuccessful';
+          alert("Copied to clipboard!");
+        } catch (err) {
+          console.error('Failed to copy text: ', err);
+        }
+
+        document.body.removeChild(textarea);
+      }
+    }
+
+    function updateBox(text) {
+      var box = document.getElementById("box1");
+      box.innerText = text;
+    }
+
+    function darkMode() {
+      var element = document.body;
+      var content = document.getElementById("DarkModetext");
+      element.className = "dark-mode";
+      content.innerText = "Dark Mode is ON";
+    }
+
+    function lightMode() {
+      var element = document.body;
+      var content = document.getElementById("DarkModetext");
+      element.className = "light-mode";
+      content.innerText = "Dark Mode is OFF";
+    }
+  </script>
 </body>
 </html>
