@@ -6,13 +6,21 @@
     <link rel="icon" href="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg" />
   
 <head>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 </head>
-  <body>
-  <div id="player"></div>
-  <script>
-    var player = new Clappr.Player({source: "https://krakenfiles.com/embed-video/wavNC7Y1Xv", parentId: "#player"});
-  </script>
+<body>
+
+<div id="player"></div>
+
+<script>
+    var episodeId = "pokemon-shinsaku-anime-episode-12";
+    async function getSource() {
+        const request = await fetch("https://consumet-api-production-0afb.up.railway.app/anime/gogoanime/watch/" + episodeId);
+        const json = await request.json();
+        var player = new Clappr.Player({source: json.sources[2].url, parentId: "#player"});
+    }
+    getSource();
+</script>
 </body>
 
  <style>
