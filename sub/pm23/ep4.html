@@ -6,13 +6,21 @@
     <link rel="icon" href="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg" />
   
 <head>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
 </head>
-  <body>
-  <div id="player"></div>
-  <script>
-    var player = new Clappr.Player({source: "https://ta-053.ajupitercdn.com/1ab5d45273a9183bebb58eb74d5722d8ea6384f350caf008f08cf018f1f0566d0cb82a2a799830d1af97cd3f4b6a9a81ef3aed2fb783292b1abcf1b8560a1d1aa308008b88420298522a9f761e5aa1024fbe74e5aa853cfc933cd1219327d1232e91847a185021b184c027f97ae732b3708ee6beb80ba5db6628ced43f1196fe/231a4e0d29a1199f8c6234a79aa964fd/ep.4.1682727648.m3u8", parentId: "#player"});
-  </script>
+<body>
+
+<div id="player"></div>
+
+<script>
+    var episodeId = "pokemon-shinsaku-anime-episode-4";
+    async function getSource() {
+        const request = await fetch("https://consumet-api-production-0afb.up.railway.app/anime/gogoanime/watch/" + episodeId);
+        const json = await request.json();
+        var player = new Clappr.Player({source: json.sources[2].url, parentId: "#player"});
+    }
+    getSource();
+</script>
 </body>
 
  <style>
