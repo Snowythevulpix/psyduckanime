@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PsyduckAnime - best way to watch pokemon free in 2023</title>
+      <title>PsyduckAnime - best place to watch pokemon subbed and dubbed</title>
+<meta property="og:title" content="Psyduckanime - watch pokemon for free">
+<meta property="og:image" content="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg">
     <!-- Favicon -->
     <link rel="icon" href="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg" />
+  
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <!-- Core theme CSS -->
@@ -25,27 +28,28 @@
       <img src="https://i.pinimg.com/736x/e7/6b/46/e76b4623af3d2f3a998362fd8fc9d8c7.jpg" alt="Profile Picture">
     </a>
     
-      </div>
-    </div>
-
     <div id="userName">
       PsyduckAnime
     </div>
 
     <div id="links">
-      <a class="link" href="movies/home.html" target="_self">
-        movies
-      </a>
-    
-    <div id="links">
-      <a class="link" href="mpm/home.html" target="_self">
-        aim to be a pokemon master (ultimate jouneys)
+      <a class="link" href="ep1.html" target="_self">
+        ep1
       </a>
 
-                      <div id="links">
-      <a class="link" href="sm/home.html" target="_self">
-        sun and moon
-      </a>
-      
+      <!-- Episodes 2 to 146 -->
+      <script>
+        for (let episode = 2; episode <= 146; episode++) {
+          let link = document.createElement('a');
+          link.className = 'link';
+          link.href = 'ep' + episode + '.html';
+          link.target = '_self';
+          link.textContent = 'ep' + episode;
+
+          document.getElementById('links').appendChild(link);
+        }
+      </script>
+    </div>
   </body>
 </html>
++
