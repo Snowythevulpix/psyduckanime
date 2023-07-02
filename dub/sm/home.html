@@ -39,7 +39,7 @@
 
       <!-- Episodes 2 to 146 -->
       <script>
-        for (let episode = 2; episode <= 146; episode++) {
+        for (let episode = 2; episode <= 63; episode++) {
           let link = document.createElement('a');
           link.className = 'link';
           link.href = 'ep' + episode + '.html';
@@ -48,7 +48,19 @@
 
           document.getElementById('links').appendChild(link);
         }
+
+                for (let episode = 65; episode <= 146; episode++) {
+          let link = document.createElement('a');
+          link.className = 'link';
+          link.href = 'ep' + episode + '.html';
+          link.target = '_self';
+          link.textContent = 'ep' + episode;
+
+          document.getElementById('links').appendChild(link);
+        }
+        
       </script>
     </div>
   </body>
 </html>
++
