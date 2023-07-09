@@ -6,21 +6,13 @@
     <link rel="icon" href="https://m.media-amazon.com/images/M/MV5BMGNjMmFlYWUtMTBjNS00YzdlLTk3NzktZjFjMjZlMWFiODUyXkEyXkFqcGdeQXVyOTA1ODU0Mzc@._V1_FMjpg_UX1000_.jpg" />
   
 <head>
-     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
 </head>
-<body>
-
-<div id="player"></div>
-
-<script>
-    var episodeId = "pokemon-2019-dub-episode-141";
-    async function getSource() {
-        const request = await fetch("https://consumet-api-production-0afb.up.railway.app/anime/gogoanime/watch/" + episodeId);
-        const json = await request.json();
-        var player = new Clappr.Player({source: json.sources[2].url, parentId: "#player"});
-    }
-    getSource();
-</script>
+  <body>
+  <div id="player"></div>
+  <script>
+    var player = new Clappr.Player({source: "https://img.guildedcdn.com/ContentMediaGenericFiles/d4ed2c39efa4f8161198c111d5536c5f-Full.mp4?w=1280&h=718", parentId: "#player"});
+  </script>
 </body>
 
  <style>
@@ -59,4 +51,5 @@
       }
     </script>
   </body>
+  
 </html>
